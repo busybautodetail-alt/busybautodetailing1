@@ -286,29 +286,12 @@
 
         <div class="quote-form-box">
           <div class="section-heading">
-            <p class="eyebrow">Get a quote</p>
-            <h2>Text us your details for a quick estimate.</h2>
+            <p class="eyebrow">Call or text today</p>
+            <h2>Get a quote</h2>
           </div>
-          <form id="quote-form" class="quote-form" action="#" method="POST">
-            <label>
-              Full name
-              <input id="quote-name" type="text" name="name" placeholder="Your name" required />
-            </label>
-            <label>
-              Phone number
-              <input id="quote-phone" type="tel" name="phone" placeholder="(925) 518-8973" required />
-            </label>
-            <label>
-              Vehicle info
-              <input id="quote-vehicle" type="text" name="vehicle" placeholder="Make, model, year" required />
-            </label>
-            <label>
-              Message
-              <textarea id="quote-message" name="message" rows="4" placeholder="Describe the service you need" required></textarea>
-            </label>
-            <button class="btn btn-primary" type="submit">Send Quote via SMS</button>
-            <p class="quote-help">This will open your SMS app to send the quote request directly to (925) 518-8973.</p>
-          </form>
+          <div class="quote-cta">
+            <a class="btn btn-primary" href="tel:+19255188973">Call or Text 925-518-8973</a>
+          </div>
         </div>
       </section>
     </main>
@@ -319,22 +302,5 @@
         <p>Shine. Protect. Repeat.</p>
       </div>
     </footer>
-
-    <script>
-      document.getElementById('quote-form')?.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const name = encodeURIComponent(document.getElementById('quote-name')?.value.trim() || '');
-        const phone = encodeURIComponent(document.getElementById('quote-phone')?.value.trim() || '');
-        const vehicle = encodeURIComponent(document.getElementById('quote-vehicle')?.value.trim() || '');
-        const message = encodeURIComponent(document.getElementById('quote-message')?.value.trim() || '');
-
-        const smsBody = `Quote request from ${name}%0APhone: ${phone}%0AVehicle: ${vehicle}%0AService details: ${message}`;
-        const smsNumber = '+19255188973';
-        const smsUrl = `sms:${smsNumber}?body=${smsBody}`;
-
-        window.location.href = smsUrl;
-      });
-    </script>
   </body>
 </html>
