@@ -22,7 +22,7 @@ body {
   font-family: Inter, "Segoe UI", Roboto, sans-serif;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("assets/hero image.jpg") center/cover no-repeat;
+    url("assets/interior.png") center/cover no-repeat;
   background-color: #07111d;
   color: var(--text);
   line-height: 1.6;
